@@ -6,11 +6,11 @@ require 'celtics_jerseys_gem/version'
 Gem::Specification.new do |spec|
   spec.name          = "celtics_jerseys_gem"
   spec.version       = CelticsJerseysGem::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Chris Sexton"]
+  spec.email         = ["champlain2013@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{List of Boston Celtics jersey prices.}
+  spec.description   = %q{List of Boston Celtics jersey prices on the Celtics offical team store.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
