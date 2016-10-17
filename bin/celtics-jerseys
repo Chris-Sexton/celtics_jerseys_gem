@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
+require './lib/celtics_jerseys_gem'
+
 CelticsJerseysGem::CLI.new.call
