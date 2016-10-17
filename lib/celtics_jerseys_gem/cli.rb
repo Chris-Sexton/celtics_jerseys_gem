@@ -10,19 +10,21 @@ class CelticsJerseysGem::CLI
   def list_prices
     puts "Today's Boston Celtics Jersey Prices:"
     @deals = CelticsJerseysGem::Deal.today
+    @deals.each.with_index(1) do |deal, i|
+      puts "#{i}. #{deal.name} - #{deal.price}"
+    end
   end
 
   def menu
-    puts "Enter the number of the jersey you would like to learn more about or type list to see all jersey prices or type exit:"
     input = nil
     while input != "exit"
+      puts "Enter the number of the jersey you would like to learn more about or type list to see all jersey prices or type exit:"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Al Horford Jersey"
-      when "2"
-        puts "Isaiah Thomas Jersey"
-      when "list"
+
+      if input.to_i > 0
+        the_deal = @deals[input.to_i-1]
+        puts "#{the_deal.name} - #{the_deal.price}"
+      elsif input == "list"
         list_prices
       else
         puts "Please type a number of a Celtics jersey deal or type list or exit."
